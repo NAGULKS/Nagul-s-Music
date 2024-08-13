@@ -6,11 +6,12 @@
     <link rel="icon" href="Landing page logo.png">
     <title>Recent Playlist</title>
     <script src="https://kit.fontawesome.com/3b97f54f7c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin:0;
+            margin: 0;
         }
 
         .spotify-playlists {
@@ -21,6 +22,8 @@
         .list {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center; /* Center the items */
+            gap: 10px; /* Add some space between the items */
         }
 
         .item {
@@ -44,156 +47,186 @@
             font-size: 24px;
             cursor: pointer;
         }
+
         .logo {
             height: 50px;
         }
+
         .navbar {
-            display: flex;
-            align-items: center;
-            background-color: #000000;
-            padding: 0 16px;
+            background-color: #000;
+            padding: 10px 16px;
             width: 100%;
             box-sizing: border-box;
-        }
-        .navbar ul {
-            list-style: none;
             display: flex;
-            margin: 0;
+            align-items: center;
+            justify-content: space-between;
+            border: 2px solid red;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
             padding: 0;
+            margin: 0;
         }
-        .navbar ul li {
-            margin: 0 8px;
-            display: inline-block;
-            width: 70px;
+
+        .nav-item {
+            margin-left: 20px;
         }
-        .navbar ul li a {
-            color: white;
-            text-decoration: none;
+
+        .nav-link {
+            color: #b3b3b3;
             font-weight: bold;
             font-size: 14px;
             letter-spacing: 1px;
-            color: #b3b3b3;
-        }
-        .navbar ul li a:hover,
-        .navbar ul li a:active,
-        .navbar ul li a:focus {
-            color: #ffffff;
-            font-size: 15px;
-        }
-        .navbar ul li.divider {
-            color: #ffffff;
-            font-size: 20px;
-            margin: 0 20px;
-        }
-        .navbar li a.button {
-            font-size: 14px;
             text-decoration: none;
-            white-space: nowrap;
-            margin-left: -65px;
         }
-        .navbar .move {
-            margin-left: auto;
-        }
-        .navbar li a.button:hover,
-        .navbar li a.button:active,
-        .navbar li a.button:focus {
+
+        .nav-link:hover {
+            color: #ffffff;
             font-size: 15px;
         }
-    .move{
-        margin-left: 600px;
-    }
-    .topbar .a{
+
+        .topbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .topbar button {
             cursor: pointer;
             width: 34px;
             height: 34px;
             border-radius: 100%;
             font-size: 15px;
-            margin-left: 40px;
-            margin-top: 10px;
-            border: 0px;
             background-color: white;
-            margin-right: -20px;
+            margin-left: 10px;
+        }
+        .description {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+        /* Responsive Design */
+        @media (max-width: 560px) {
+            .topbar {
+                display: none; /* Hide the topbar on smaller screens */
+            }
+
+            .list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* Create two columns */
+                gap: 10px; /* Add some space between the grid items */
+            }
+
+            .item {
+                width: 100%; /* Ensure the items take full width in their grid cells */
+                margin: 0; /* Remove margin to avoid overflowing */
+            }
+
+            .play {
+                top: -40px; /* Adjust position of the play button */
+                left: 50%; /* Center the play button */
+                transform: translateX(-50%); /* Ensure proper centering */
+            }
+
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <ul>
-            <li>
-                <a href="index.html"><img class="logo" src="Nagulmusic.png" alt="logo"></a>
-            </li>
-                <div class="topbar">
-                  <button type="button" id="backButton" class="fa fas fa-chevron-left a"></button>
-                  <button type="button" id="forwardButton" class="fa fas fa-chevron-right a"></button>
-                </div>
-    
-        </ul>
-        <ul class="move">
-            <li>
-                <a href="premium.html">Premium</a>
-            </li>
-            <li>
-                <a href="support.html">Support</a>
-            </li>
-            <li>
-                <a href="download.html">Download</a>
-            </li>
-            <li class="divider">|</li>
-            <li>
-                <a class="button" href="login.html">Sign Up/Login</a>
-            </li>
-        </ul>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html"><img class="logo" src="Nagulmusic.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="premium.html">Premium</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="support.html">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="download.html">Download</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="spotify-playlists">
         <h2>Recent Playlist</h2>
         <div class="list" id="recent-playlist"></div>
         <a href="index.html">Back to Music Player</a>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <script>
-        const recentPlaylist = JSON.parse(localStorage.getItem('recentPlaylist')) || [];
-        const playlistElement = document.getElementById('recent-playlist');
+      const recentPlaylist = JSON.parse(localStorage.getItem('recentPlaylist')) || [];
+const playlistElement = document.getElementById('recent-playlist');
 
-        const images = [
-            'Images/AR/download (1).jpeg',
-            'Images/AR/download (2).jpeg',
-            'Images/AR/download (3).jpeg',
-            'Images/AR/download (4).jpeg',
-            'Images/AR/download.jpeg',
-            'Images/AR/images.jpeg'
-        ];
+const images = [
+    'Images/AR/download (1).jpeg',
+    'Images/AR/download (2).jpeg',
+    'Images/AR/download (3).jpeg',
+    'Images/AR/download (4).jpeg',
+    'Images/AR/download.jpeg',
+    'Images/AR/images.jpeg'
+];
 
-        recentPlaylist.forEach((song, index) => {
-            const item = document.createElement('div');
-            item.classList.add('item');
+recentPlaylist.forEach((song, index) => {
+    let songPath, description;
 
-            const img = document.createElement('img');
-            img.src = images[index % images.length]; // Just for demo, using the first few images repeatedly
-            item.appendChild(img);
+    if (typeof song === 'string') {
+        // Handle case where song is a string
+        songPath = song;
+        description = "No description available";  // Default description
+    } else if (song && song.song && song.description) {
+        // Handle case where song is an object
+        songPath = song.song;
+        description = song.description;
+    } else {
+        console.error('Invalid song object:', song);
+        return; // Skip invalid entry
+    }
 
-            const playDiv = document.createElement('div');
-            playDiv.classList.add('play');
+    const item = document.createElement('div');
+    item.classList.add('item');
 
-            const playButton = document.createElement('span');
-            playButton.classList.add('playButton', 'fa', 'fa-play');
-            playButton.dataset.audio = song;
-            playDiv.appendChild(playButton);
+    const img = document.createElement('img');
+    img.src = images[index % images.length];
+    item.appendChild(img);
 
-            item.appendChild(playDiv);
+    const playDiv = document.createElement('div');
+    playDiv.classList.add('play');
 
-            playlistElement.appendChild(item);
+    
 
+    item.appendChild(playDiv);
 
-        });
-    </script>
-     <script>
-        document.getElementById("backButton").addEventListener("click", function() {
-    window.history.back();
+    const descriptionDiv = document.createElement('div');
+    descriptionDiv.classList.add('description');
+    descriptionDiv.textContent = description;
+
+    item.appendChild(descriptionDiv);
+
+    playlistElement.appendChild(item);
 });
 
-document.getElementById("forwardButton").addEventListener("click", function() {
-    window.history.forward();
-});
+
+
+
     </script>
 </body>
 </html>
