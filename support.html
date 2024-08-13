@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <link rel="icon" href="Landing page logo.png">
+    <script src="https://kit.fontawesome.com/3b97f54f7c.js" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            height: 100%;
+        }
+        .logo {
+            height: 50px;
+        }
+        .navbar {
+            background-color: #000000;
+            border: 2px solid red;
+            padding: 0 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .navbar-nav .nav-link {
+            color: #b3b3b3;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffffff;
+            font-size: 15px;
+        }
+        .topbar .a {
+            cursor: pointer;
+            width: 34px;
+            height: 34px;
+            border-radius: 100%;
+            font-size: 15px;
+            background-color: white;
+            margin-left: auto;
+        }
+        .navbar-nav.right-align {
+            margin-left: 77%;
+        }
+        .back {
+            background-image: url('Support/S3.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 90%;
+            width: 100%;
+        }
+        .container {
+            position: absolute;
+            text-align: center;
+            color: white;
+            top: 110px;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left:10%;
+        }
+        .help-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .help-container div {
+            padding: 20px 30px;
+            border-radius: 10px;
+            background-color: #333;
+            width: calc(33.333% - 20px); /* 3 columns layout */
+        }
+
+        .container input.col4 {
+            padding: 10px;
+            width: 60%;
+            max-width: 450px;
+        }
+        .container div {
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        
+        .container1 {
+            position: absolute;
+            background-color: rgb(71, 70, 70);
+            padding: 20px 0;
+            width: 100%;
+            text-align: center;
+        }
+        .container1 h1, .container1 h3 {
+            color: white;
+            margin: 10px 0;
+        }
+        .container1 ul {
+            list-style: none;
+            padding: 0;
+        }
+        @media (min-width: 570px) and (max-width: 991.98px) { /* Tablet view */
+            .help-container div {
+                width: calc(50% - 20px); /* 2 columns layout */
+            }
+             }
+        
+
+        @media (max-width: 560px) { /* Mobile view */
+            .help-container div {
+                width: calc(100% - 20px); /* 1 column layout */
+            }
+            .help-container {  
+                gap: 5px;
+            }
+            .help-container div {
+                padding: 10px 20px;
+                border-radius: 10px;
+                background-color: #333;     
+            }
+            .back {
+                background-image: url('Support/S3.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 89%;
+                width: 100%;
+             }
+
+            .container {
+                position: static; /* Use relative positioning */
+                margin-top: -600px; /* Adjust margin to move the container down */
+                text-align: center;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                margin-left: auto; /* Center horizontally */
+                margin-right: auto; /* Center horizontally */
+                width: 90%; /* Adjust width for better responsiveness */
+            }
+
+            .container1 {
+                 padding: 20px;
+                position: absolute; /* Ensure it stays within the content flow */
+                margin-top: -12px;/* Adjust margin to move the footer down */
+                text-align: center;
+                width: 100%;
+                background: #333; /* Example footer background color */
+                color: white; /* Example footer text color */
+                box-sizing: border-box;
+            }
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html"><img class="logo" src="Nagulmusic.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="topbar d-none d-lg-block">
+            <button type="button" id="backButton" class="fa fas fa-chevron-left a"></button>
+            <button type="button" id="forwardButton" class="fa fas fa-chevron-right a"></button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav right-align">
+                <li class="nav-item">
+                    <a class="nav-link" href="premium.html">Premium</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="support.html">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="download.html">Download</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="back"></div>
+    <div class="container">
+        <h3 class="col1">Nagul's Music Support</h3>
+        <h1 class="col2">How can we help you?</h1>
+        <a href="login.html"><h3 class="col3"><u>Login</u> for faster help</h3></a>
+        <input class="col4" type="text" placeholder="Search">
+        <div class="help-container">
+            <div class="col5" style="background-color:rgb(92, 4, 4);">Payment Help</div>
+            <div class="col6" style="background-color:rgb(47, 47, 234);">Account Help</div>
+            <div class="col7" style="background-color:rgb(195, 3, 195);">Plan Help</div>
+            <div class="col8" style="background-color:rgb(92, 4, 4);">Safety & Privacy</div>
+            <div class="col9" style="background-color:rgb(47, 47, 234);">Device Help</div>
+            <div class="col10" style="background-color:rgb(195, 3, 195);">App Help</div>
+        </div>
+    </div>
+    <div class="container1">
+        <ul>
+            <li>
+                <h1 class="col11">Quick help</h1>
+                <h3 class="col12">Can't log in</h3>
+                <h3 class="col13">Failed payment help</h3>
+                <h3 class="col14">Charged too much</h3>
+                <h3 class="col15">Invite or remove Family plan members</h3>
+                <h3 class="col16">Update payment details</h3>
+            </li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById("backButton").addEventListener("click", function() {
+            window.history.back();
+        });
+        document.getElementById("forwardButton").addEventListener("click", function() {
+            window.history.forward();
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

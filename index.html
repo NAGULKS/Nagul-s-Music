@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Landing page logo.png">
+  <title>Naguls Music</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="Nagulmusic.png" alt="Logo" />
+      </a>
+    </div>
+
+    <div class="navigation">
+      <ul>
+        <li><a href="index.html"><span class="fa fa-home"></span><span>Home</span></a></li>
+        <li><a href="#"><span class="fa fa-search"></span><span>Search</span></a></li>
+        <li><a href="library.html"><span class="fa fas fa-book"></span><span>Your Library</span></a></li>
+      </ul>
+    </div>
+
+    <div class="navigation">
+      <ul>
+        <li><a href="#"><span class="fa fas fa-plus-square"></span><span>Create Playlist</span></a></li>
+        <li><a href="#"><span class="fa fas fa-heart"></span><span>Liked Songs</span></a></li>
+        <li>
+          <div id="audioControls">
+            <span id="previousButton" class="controlButton fa fa-backward"></span>
+            <span id="controlPlayPauseButton" class="controlButton fa fa-play"></span>
+            <span id="nextButton" class="controlButton fa fa-forward"></span>
+          </div>
+          <div id="timeline">
+            <div id="progress">
+              <div id="progress-bar"></div>
+            </div>
+          </div>
+          <div id="timeDisplay">
+            <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="policies">
+      <ul>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <div class="topbar">
+      <button class="btn btn-dark" id="navbarToggle" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="prev-next-buttons">
+        <button class="btn btn-dark" id="backButton"><i class="fa fa-chevron-left"></i></button>
+        <button class="btn btn-dark" id="forwardButton"><i class="fa fa-chevron-right"></i></button>
+      </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="premium.html">Premium</a></li>
+            <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+            <li class="nav-item"><a class="nav-link" href="download.html">Download</a></li>
+          </ul>
+          <div class="navbar-nav">
+            <li class="nav-item divider">|</li>
+            <li class="nav-item"><a class="nav-link button" href="login.html">Sign Up</a></li>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+
+    <div class="spotify-playlists">
+      <h2>Nagul's Music Playlists</h2>
+      <div class="list">
+        <div class="item">
+          <img src="Images/AR/download (1).jpeg" alt="img1" />
+          <div class="play">
+            <span class="playButton fa fa-play" data-audio="audio/1.mp3"></span>
+          </div>
+          <h4>Today's Top Hits</h4>
+          <p>Rema & Selena Gomez are on top of the...</p>
+        </div>
+        <div class="item">
+          <img src="Images\AR\download (2).jpeg" alt="img2"/>
+          <div class="play">
+            <span id="playButton1" class="playButton fa fa-play" data-audio="audio/2.mp3"></span>
+          </div>
+          <h4>RapCaviar</h4>
+          <p>New Music from Lil Baby, Juice WRLD an...</p>
+        </div>
+
+        <div class="item">
+          <img src="Images\AR\download (3).jpeg" alt="img3" />
+          <div class="play">
+            <span id="playButton1" class="playButton fa fa-play" data-audio="audio/3.mp3"></span>
+          </div>
+          <h4>All out 2010s</h4>
+          <p>The biggest spmgs pf tje 2010s. Cover:...</p>
+        </div>
+
+        <div class="item">
+          <img src="Images\AR\download (4).jpeg"  alt="img4"/>
+          <div class="play">
+            <span id="playButton1" class="playButton fa fa-play" data-audio="audio/4.mp3"></span>
+          </div>
+          <h4>Rock Classics</h4>
+          <p>Rock Legends & epic songs that continue t...</p>
+        </div>
+
+        <div class="item">
+          <img src="Images/AR/download.jpeg" alt="img5" />
+          <div class="play">
+            <span id="playButton1" class="playButton fa fa-play" data-audio="audio/5.mp3"></span>
+          </div>
+          <h4>Chill Hits</h4>
+          <p>Kick back to the best new and recent chill...</p>
+        </div>
+
+        <div class="item">
+          <img src="Images\AR\images.jpeg" alt="img6"/>
+          <div class="play">
+            <span id="playButton1" class="playButton fa fa-play" data-audio="audio/6.mp3"></span>
+          </div>
+          <h4>Viva Latino</h4>
+          <p>Today's top Latin hits elevando nuestra...</p>
+        </div>
+        <div class="item">
+          <img src="Images\AR\download (2).jpeg" alt="img2"/>
+          <div class="play">
+            <span id="playButton1" class="playButton fa fa-play" data-audio="audio/2.mp3"></span>
+          </div>
+          <h4>RapCaviar</h4>
+          <p>New Music from Lil Baby, Juice WRLD an...</p>
+        </div>
+        <!-- Additional items here -->
+      </div>
+    </div>
+
+    <div class="spotify-playlists">
+      <h2>Focus</h2>
+      <div class="list">
+        <div class="item">
+          <img src="Images/AR/download (3).jpeg" alt="img11" />
+          <div class="play">
+            <span class="playButton fa fa-play" data-audio="audio/7.mp3"></span>
+          </div>
+          <h4>Peaceful Piano</h4>
+          <p>Relax and indulge with beautiful piano pieces</p>
+        </div>
+        <div class="item">
+          <img src="Images\AR\images.jpeg" alt="img6"/>
+         <div class="play">
+           <span id="playButton1" class="playButton fa fa-play" data-audio="audio/8.mp3"></span>
+         </div>
+         <h4>Deep Focus</h4>
+         <p>Keep calm and focus with ambient and pos...</p>
+       </div>
+
+       <div class="item">
+          <img src="Images\AR\images.jpeg" alt="img6"/>
+         <div class="play">
+           <span id="playButton1" class="playButton fa fa-play" data-audio="audio/9.mp3"></span>
+         </div>
+         <h4>Instrumental Study</h4>
+         <p>Focus with soft study music in the...</p>
+       </div>
+
+       <div class="item">
+          <img src="Images\AR\images.jpeg" alt="img6"/>
+         <div class="play">
+           <span id="playButton1" class="playButton fa fa-play" data-audio="audio/1.mp3"></span>
+         </div>
+         <h4>chill lofi study beats</h4>
+         <p>The perfect study beats, twenty four...</p>
+       </div>
+       <div class="item">
+         <img src="Images\AR\download (2).jpeg" alt="img2"/>
+         <div class="play">
+           <span id="playButton1" class="playButton fa fa-play" data-audio="audio/2.mp3"></span>
+         </div>
+         <h4>RapCaviar</h4>
+         <p>New Music from Lil Baby, Juice WRLD an...</p>
+       </div>
+
+       <div class="item">
+          <img src="Images\AR\images.jpeg" alt="img6"/>
+         <div class="play">
+           <span id="playButton1" class="playButton fa fa-play" data-audio="audio/2.mp3"></span>
+         </div>
+         <h4>Coding Mode</h4>
+         <p>Dedicated to all the programmers out there.</p>
+       </div>
+       
+       <div class="item">
+          <img src="Images\AR\images.jpeg" alt="img6"/>
+         <div class="play">
+           <span id="playButton1" class="playButton fa fa-play" data-audio="audio/3.mp3"></span>
+         </div>
+         <h4>Focus Flow</h4>
+         <p>Uptempo instrumental hip hop beats.</p>
+       </div>
+        <!-- Additional items here -->
+      </div>
+    </div>
+
+    <div class="spotify-playlists">
+      <h2>Mood</h2>
+      <div class="list">
+        <div class="item">
+          <img src="Images/AR/images.jpeg" alt="img6" />
+          <div class="play">
+            <span class="playButton fa fa-play" data-audio="audio/4.mp3"></span>
+          </div>
+          <h4>Mood Booster</h4>
+          <p>Get happy with today's dose of feel-good...</p>
+        </div>
+        <div class="item">
+          <img src="Images\AR\images.jpeg" alt="img6"/>
+         <div class="play">
+           <span id="playButton1" class="playButton fa fa-play" data-audio="audio/5.mp3"></span>
+         </div>
+         <h4>Feelin' Good</h4>
+         <p>Feel good with this positively timeless...</p>
+       </div>
+
+       <div class="item">
+          <img src="Images\AR\images.jpeg" alt="img6"/>
+         <div class="play">
+           <span id="playButton1" class="playButton fa fa-play" data-audio="audio/6.mp3"></span>
+         </div>
+         <h4>Dark & Stormy</h4>
+         <p>Beautifully dark, dramatic tracks.</p>
+       </div>
+
+       <div class="item">
+          <img src="Images\AR\images.jpeg" alt="img6"/>
+         <div class="play">
+           <span id="playButton1" class="playButton fa fa-play" data-audio="audio/7.mp3"></span>
+         </div>
+         <h4>Feel Good Piano</h4>
+         <p>Happy vibes for an upbeat morning.</p>
+       </div>
+
+       <div class="item">
+          <img src="Images\AR\images.jpeg" alt="img6"/>
+         <div class="play">
+           <span id="playButton1" class="playButton fa fa-play" data-audio="audio/8.mp3"></span>
+         </div>
+         <h4>Feelin' Myself</h4>
+         <p>The hip-hop playlist that's a whole mood...</p>
+       </div>
+
+       <div class="item">
+          <img src="Images\AR\images.jpeg" alt="img6"/>
+         <div class="play">
+           <span id="playButton1" class="playButton fa fa-play" data-audio="audio/9.mp3"></span>
+         </div>
+         <h4>Chill Tracks</h4>
+         <p>Softer kinda dance</p>
+       </div>
+
+       <div class="item">
+          <img src="Images\AR\images.jpeg" alt="img6"/>
+         <div class="play">
+           <span id="playButton1" class="playButton fa fa-play" data-audio="audio/1.mp3"></span>
+         </div>
+         <h4>Feel-Good Indie Rock</h4>
+         <p>The best indie rock vibes - classic and...</p>
+       </div>
+        <!-- Additional items here -->
+      </div>
+    </div>
+
+    <div class="preview">
+      <div class="text">
+        <h6>Preview of Nagul's Music</h6>
+        <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+      </div>
+      <div class="button">
+        <a href="login.html"><button type="button">Sign up free</button></a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/23cecef777.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+</html>

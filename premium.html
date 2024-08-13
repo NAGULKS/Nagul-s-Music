@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium</title>
+    <link rel="icon" href="Landing page logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/3b97f54f7c.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            overflow-x: hidden;
+        }
+        .logo {
+            height: 50px;
+        }
+        .navbar {
+            margin-top: 0;
+            background-color: #000000;
+            border: 2px solid red;
+            padding: auto;
+            padding: 0 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .navbar-nav .nav-link {
+            color: #b3b3b3;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffffff;
+            font-size: 15px;
+        }
+        .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            background-color: #333;
+        }
+        .dropdown-menu a {
+            color: white;
+        }
+        .dropdown-menu a:hover {
+            background-color: #575757;
+        }
+        .topbar .a {
+            cursor: pointer;
+            width: 34px;
+            height: 34px;
+            border-radius: 100%;
+            font-size: 15px;
+            background-color: white;
+            margin-left: auto;
+        }
+        .col1, .col2, .col3, .col4, .col5, .col6 {
+            color: white;
+        }
+        .col1 {
+            top: 20%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            font-size: xx-large;
+            color: yellow;
+            border-radius: 10px;
+            border: 1px solid green;
+            width: 360px;
+            background-image: linear-gradient(to right, #ae2896, #509bf5);
+            padding: 10px;
+        }
+        .col2 {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 35%;
+            color: white;
+            font-size: xx-large;
+            text-align: center;
+            left: 50%;
+        }
+        .col3 {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 45%;
+            color: white;
+            left: 50%;
+        }
+        .col4 {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 52%;
+            color: red;
+            left: 50%;
+            font-size: x-large;
+        }
+        .col4 u {
+            color: rgb(13, 5, 236);
+        }
+        .col5 {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 65%;
+            color: white;
+            left: 50%;
+            font-size: xx-large;
+            text-align: center;
+        }
+        .col6 {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 85%;
+            left: 50%;
+            z-index: -1;
+        
+        }
+        .col6 .small-image {
+            width: 600px; 
+            height: 300px;
+        }
+        .navbar-nav.right-align {
+            margin-left:77%;
+        }
+        @media (max-width: 560px) { /* Mobile view */
+        .navbar-nav {
+            flex-direction: column;
+        }
+        .navbar-nav .nav-item {
+            margin-bottom: 10px;
+        }
+        .col1 {
+            text-align: center;
+            position: static;
+            transform: none;
+            width: auto;
+        
+         }
+    .col2{
+        text-align: center;
+        position: static;
+        transform: none;
+        width: auto;
+        font-size:large;
+        margin-bottom: 20px;
+    }
+    .col3{
+        text-align: center;
+        position: static;
+        transform: none;
+        width: auto;
+        margin-bottom: 20px;
+    }
+    .col4{
+        text-align: center;
+        position: static;
+        transform: none;
+        width: auto;
+        margin-bottom: 20px;
+    }
+    .col5{
+        text-align: center;
+        position: static;
+        transform: none;
+        width: auto;
+        font-size:x-large;
+    }
+    .col6 {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 80%;
+            left: 50%;
+            z-index: -1;
+    }
+    .col6 .small-image {
+        width: 100%; 
+        height: auto; 
+    }
+    .topbar .a {
+        margin-left: 0;
+    }
+}
+
+        @media (min-width: 570px) and (max-width: 991.98px) { /* Tablet view */
+             .navbar-nav {
+                flex-direction: column;
+            }
+            .navbar-nav .nav-item {
+                margin-bottom: 10px;
+            }
+            .col1, .col2, .col3, .col4, .col5, .col6 {
+                text-align: center;
+                position: static;
+                transform: none;
+                width: auto;
+            }
+            .topbar .a {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html"><img class="logo" src="Nagulmusic.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="topbar d-none d-lg-block">
+            <button type="button" id="backButton" class="fa fas fa-chevron-left a"></button>
+            <button type="button" id="forwardButton" class="fa fas fa-chevron-right a"></button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav right-align">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="premium.html" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"> Premium </a>
+                    
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#plan1">Premium Individual<br>1 account - For one person</a>
+                        <a class="dropdown-item" href="#plan2">Premium Duo<br>2 accounts - For couples under one roof</a>
+                        <a class="dropdown-item" href="#plan3">Premium Family<br>6 accounts - For family members under one roof</a>
+                        <a class="dropdown-item" href="#plan4">Premium Student<br>1 account - Discount for eligible students</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="support.html">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="download.html">Download</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="back">
+        <div class="col1">Nagul's Music Premium</div>
+        <div class="col2">Get Music Premium to listen to music ad-free, <br>offline & with your screen off</div>
+        <div class="col3">Prepaid and monthly plans available. Starting from ₹59.00/month. Free trials with monthly plans.</div>
+        <div class="col4">Over <u>100M</u> <u>Songs</u> and more at your fingertips</div>
+        <div class="col5">Enjoy every second by <br>Single Click</div>
+        <div class="col6"><img src="Enjoy.png" alt="enjoypho" class="small-image"></div>
+    </div>
+    <script>
+        document.getElementById("backButton").addEventListener("click", function() {
+            window.history.back();
+        });
+        document.getElementById("forwardButton").addEventListener("click", function() {
+            window.history.forward();
+        });
+    </script>
+</body>
+</html>

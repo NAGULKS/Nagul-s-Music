@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+    <link rel="icon" href="Landing page logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/3b97f54f7c.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .navbar {
+            background-color: #000000;
+            border: 2px solid red;
+            padding: 0 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .navbar-nav .nav-link {
+            color: #b3b3b3;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffffff;
+            font-size: 15px;
+        }
+
+        .topbar .a {
+            cursor: pointer;
+            width: 34px;
+            height: 34px;
+            border-radius: 100%;
+            font-size: 15px;
+            background-color: white;
+            margin-left: auto;
+        }
+
+        .navbar-nav.right-align {
+            margin-left:77%;
+        }
+
+        .centerbar {
+            background-image: url('Nagulmusic.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            height: 750px;
+            width: 100%;
+            text-align: center;
+            color: red;
+            margin-top: 0;
+        }
+
+        .centerbar h1 {
+            padding-top: 50px;
+        }
+
+        .centerbar p {
+            margin-top: 40px;
+            color: greenyellow;
+        }
+
+        .centerbar a {
+            display: block;
+            margin-top: 60px;
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .centerbar a img {
+            height: 80px;
+        }
+
+        .centerbar1,
+        .centerbar2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .centerbar1 {
+            background-color: #f0f0f0;
+        }
+
+        .centerbar2 {
+            background-color: #1d1c1c;
+            color: white;
+        }
+
+        .centerbar2 .fa-solid {
+            color: green;
+            margin-right: 5px;
+        }
+
+        .col7 ul,
+        .col10 ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .col7 ul li,
+        .col10 ul li {
+            margin: 0 10px;
+        }
+
+        @media (min-width: 570px) and (max-width: 991.98px) {
+            .centerbar {
+                background-image: url('Nagulmusic.png');
+                background-repeat: round;
+                height: auto;
+            }
+            .navbar-nav {
+                flex-direction: column;
+            }
+
+            .navbar-nav .nav-item {
+                margin-bottom: 10px;
+            }
+
+            .col7 ul {
+                flex-direction: column;
+            }
+
+            .col3 img,
+            .col8 img {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .centerbar {
+                background-image: url('Nagulmusic.png');
+                background-repeat: round;
+                height: auto;
+            }
+
+            .navbar-nav.right-align {
+                margin-left: auto;
+            }
+
+            .navbar-brand img {
+                height: 40px;
+            }
+
+            .topbar .a {
+                width: 30px;
+                height: 30px;
+                font-size: 12px;
+            }
+
+            .col3 img,
+            .col8 img {
+                width: 100%;
+            }
+
+            .col7 ul {
+                flex-direction: column;
+            }
+
+            .centerbar2 ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0;
+                list-style: none;
+            }
+
+            .centerbar2 ul li {
+                flex: 1 1 25%; /* 4 items per row */
+                text-align: center;
+                margin: 5px;
+            }
+
+            .centerbar2 ul li:nth-child(n+5) {
+                flex: 1 1 33%; /* 3 items per row starting from the 5th item */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html"><img class="logo" src="Nagulmusic.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="topbar d-none d-lg-block">
+            <button type="button" id="backButton" class="fa fas fa-chevron-left a"></button>
+            <button type="button" id="forwardButton" class="fa fas fa-chevron-right a"></button>
+        </div>
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav right-align">
+                <li class="nav-item">
+                    <a class="nav-link" href="premium.html">Premium</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="support.html">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="download.html">Download</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="centerbar">
+        <h1>Download <u>Nagul's</u> <u>Music</u></h1>
+        <p>Play millions of songs and podcasts on your device.</p>
+        <a href="https://apps.microsoft.com/detail/9ncbcszsjrsb?rtc=1&hl=en-in&gl=IN"><img src="Download/msd.svg" alt="Microsoft Download"></a>
+        <a href="index.html"><h4><u>Download directly from Nagul's Music</u></h4></a>
+    </div>
+
+    <div class="centerbar1">
+        <h1>Bring your music to mobile and tablet, too.</h1>
+        <p>Listening on your phone or tablet is free, easy, and fun.</p>
+        <div class="col7">
+            <ul>
+                <li><a href="#"><img src="Download/as.svg" alt=""></a></li>
+                <li><a href="#"><img src="Download/msd.svg" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="centerbar2">
+        <div class="col8"><img src="Nagulmusic.png" alt=""></div>
+        <div class="col9">One account, listen everywhere.</div>
+        <div class="col10">
+            <ul>
+                <li><i class="fa-solid fa-tv"></i>TV</li>
+                <li><i class="fa-solid fa-desktop"></i>Computer</li>
+                <li><i class="fa-solid fa-tablet"></i>Tablet</li>
+                <li><i class="fa-solid fa-gamepad"></i>Console</li>
+                <li><i class="fa-solid fa-car"></i>Car</li>
+                <li><i class="fa-solid fa-volume-high"></i>Speaker</li>
+                <li><i class="fa-solid fa-mobile"></i>Mobile</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("backButton").addEventListener("click", function() {
+            window.history.back();
+        });
+        document.getElementById("forwardButton").addEventListener("click", function() {
+            window.history.forward();
+        });
+    </script>
+</body>
+
+</html>

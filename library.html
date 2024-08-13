@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Landing page logo.png">
+    <title>Recent Playlist</title>
+    <script src="https://kit.fontawesome.com/3b97f54f7c.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin:0;
+        }
+
+        .spotify-playlists {
+            text-align: left;
+            margin: 20px;
+        }
+
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .play {
+            position: relative;
+            top: -50px;
+            left: 75px;
+        }
+
+        .playButton {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .logo {
+            height: 50px;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #000000;
+            padding: 0 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin: 0 8px;
+            display: inline-block;
+            width: 70px;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: #b3b3b3;
+        }
+        .navbar ul li a:hover,
+        .navbar ul li a:active,
+        .navbar ul li a:focus {
+            color: #ffffff;
+            font-size: 15px;
+        }
+        .navbar ul li.divider {
+            color: #ffffff;
+            font-size: 20px;
+            margin: 0 20px;
+        }
+        .navbar li a.button {
+            font-size: 14px;
+            text-decoration: none;
+            white-space: nowrap;
+            margin-left: -65px;
+        }
+        .navbar .move {
+            margin-left: auto;
+        }
+        .navbar li a.button:hover,
+        .navbar li a.button:active,
+        .navbar li a.button:focus {
+            font-size: 15px;
+        }
+    .move{
+        margin-left: 600px;
+    }
+    .topbar .a{
+            cursor: pointer;
+            width: 34px;
+            height: 34px;
+            border-radius: 100%;
+            font-size: 15px;
+            margin-left: 40px;
+            margin-top: 10px;
+            border: 0px;
+            background-color: white;
+            margin-right: -20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li>
+                <a href="index.html"><img class="logo" src="Nagulmusic.png" alt="logo"></a>
+            </li>
+                <div class="topbar">
+                  <button type="button" id="backButton" class="fa fas fa-chevron-left a"></button>
+                  <button type="button" id="forwardButton" class="fa fas fa-chevron-right a"></button>
+                </div>
+    
+        </ul>
+        <ul class="move">
+            <li>
+                <a href="premium.html">Premium</a>
+            </li>
+            <li>
+                <a href="support.html">Support</a>
+            </li>
+            <li>
+                <a href="download.html">Download</a>
+            </li>
+            <li class="divider">|</li>
+            <li>
+                <a class="button" href="login.html">Sign Up/Login</a>
+            </li>
+        </ul>
+    </div>
+    <div class="spotify-playlists">
+        <h2>Recent Playlist</h2>
+        <div class="list" id="recent-playlist"></div>
+        <a href="index.html">Back to Music Player</a>
+    </div>
+
+    <script>
+        const recentPlaylist = JSON.parse(localStorage.getItem('recentPlaylist')) || [];
+        const playlistElement = document.getElementById('recent-playlist');
+
+        const images = [
+            'Images/AR/download (1).jpeg',
+            'Images/AR/download (2).jpeg',
+            'Images/AR/download (3).jpeg',
+            'Images/AR/download (4).jpeg',
+            'Images/AR/download.jpeg',
+            'Images/AR/images.jpeg'
+        ];
+
+        recentPlaylist.forEach((song, index) => {
+            const item = document.createElement('div');
+            item.classList.add('item');
+
+            const img = document.createElement('img');
+            img.src = images[index % images.length]; // Just for demo, using the first few images repeatedly
+            item.appendChild(img);
+
+            const playDiv = document.createElement('div');
+            playDiv.classList.add('play');
+
+            const playButton = document.createElement('span');
+            playButton.classList.add('playButton', 'fa', 'fa-play');
+            playButton.dataset.audio = song;
+            playDiv.appendChild(playButton);
+
+            item.appendChild(playDiv);
+
+            playlistElement.appendChild(item);
+
+
+        });
+    </script>
+     <script>
+        document.getElementById("backButton").addEventListener("click", function() {
+    window.history.back();
+});
+
+document.getElementById("forwardButton").addEventListener("click", function() {
+    window.history.forward();
+});
+    </script>
+</body>
+</html>
