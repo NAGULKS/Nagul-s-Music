@@ -177,11 +177,13 @@ document.addEventListener('DOMContentLoaded', function() {
             mainContainer.style.marginLeft = '196px'; // Adjust main container margin
             prevNextButtons.style.display = 'none'; // Hide prev-next buttons
         } else {
-            mainContainer.style.marginLeft = '196px';
-            
+            sidebar.style.display = 'none'; // Hide the sidebar
+            mainContainer.style.marginLeft = '0'; // Reset main container margin
+            prevNextButtons.style.display = 'block'; // Show prev-next buttons
         }
     });
 });
+
 
 
   
