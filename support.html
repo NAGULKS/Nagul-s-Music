@@ -114,40 +114,46 @@
 
         @media (max-width: 560px) { /* Mobile view */
             .help-container div {
-                width: calc(100% - 20px); /* 1 column layout */
-            }
-            .help-container {  
-                gap: 5px;
-            }
-            .help-container div {
-                padding: 10px 20px;
-                border-radius: 10px;
-                background-color: #333;     
-            }
-            .back {
-                background-image: url('Support/S3.jpg');
-                background-repeat: no-repeat;
-                background-size: cover;
-                height: 89%;
-                width: 100%;
-             }
+    width: calc(100% - 20px); /* 1 column layout */
+}
+.help-container {  
+    gap: 4px;
+}
+.help-container div {
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: #333;     
+}
+.back {
+    background-image: url('Support/S3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure background image covers entire back area */
+    position: fixed; /* Fix position to avoid scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Cover full viewport height */
+    overflow: hidden; /* Prevent any scrolling within back */
+    z-index: -1; /* Ensure back stays in the background */
+}
 
-            .container {
-                position: static; /* Use relative positioning */
-                margin-top: -600px; /* Adjust margin to move the container down */
-                text-align: center;
-                color: white;
-                display: flex;
-                flex-direction: column;
-                margin-left: auto; /* Center horizontally */
-                margin-right: auto; /* Center horizontally */
-                width: 90%; /* Adjust width for better responsiveness */
-            }
-
+.container {
+    position: relative; /* Use relative positioning to adjust positioning if necessary */
+    margin-top: -20%; /* Remove negative margin */
+    text-align: center;
+    height: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    width: 90%; /* Adjust width for better responsiveness */
+    z-index: 1; /* Ensure container is above back */
+}
             .container1 {
-                 padding: 20px;
+                padding: 20px;
                 position: absolute; /* Ensure it stays within the content flow */
-                margin-top: -12px;/* Adjust margin to move the footer down */
+                margin-top: 25%;/* Adjust margin to move the footer down */
                 text-align: center;
                 width: 100%;
                 background: #333; /* Example footer background color */
